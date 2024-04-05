@@ -86,5 +86,6 @@ function playGame() {
   } else {
     console.log(`The game is a tie! Final score - Player: ${playerScore}, Computer: ${computerScore}`);
   }
-
 }
+
+playGame();
