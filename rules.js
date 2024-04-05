@@ -6,10 +6,10 @@ function getComputerChoice() {
   return choice[randomIndex];
 };
 
-const computerSelection = getComputerChoice();
+// const computerSelection = getComputerChoice();
 
-let playerSelection = prompt("Rock, Paper, Scissor - SHOOT! (Type Rock, Paper, Scissor)");
-playerSelection = playerSelection.toLowerCase();
+// let playerSelection = prompt("Rock, Paper, Scissor - SHOOT! (Type Rock, Paper, Scissor)");
+// playerSelection = playerSelection.toLowerCase();
 
 
 function playRound(playerSelection, computerSelection) {
@@ -60,4 +60,31 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-function playGame()
+function playGame() {
+  let playerScore = 0;
+  let computerScore = 0;
+
+  for (let i = 0; i < 5; i++) {
+    let playerSelection = prompt("Rock, Paper, Scissor - SHOOT! (Type Rock, Paper, Scissor)");
+    let computerSelection = getComputerChoice();
+
+    let result = playRound(playerSelection, computerSelection);
+    console.log(result);
+
+    if (result.includes("Player Wins")){
+      playerScore++;
+    }
+    else if (result.includes("Computer Wins")) {
+      computerScore++;
+    }
+  }
+
+  if (playerScore > computerScore) {
+    console.log(`You win the game! Final score - Player: ${playerScore}, Computer: ${computerScore}`);
+  } else if (computerScore > playerScore) {
+    console.log(`You lose the game! Final score - Player: ${playerScore}, Computer: ${computerScore}`);
+  } else {
+    console.log(`The game is a tie! Final score - Player: ${playerScore}, Computer: ${computerScore}`);
+  }
+
+}
