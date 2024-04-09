@@ -74,7 +74,7 @@ function playRound(playerSelection, computerSelection) {
     else if (computerSelection == 'rock') {
       computerScore++;
       updateScoreDisplay()
-      return `Computer Wins! Player did: pap${playerSelection} / Computer did: ${computerSelection}`;
+      return `Computer Wins! Player did: ${playerSelection} / Computer did: ${computerSelection}`;
     }
   }
   return `Invalid Input: ${playerSelection}`;
