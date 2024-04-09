@@ -6,22 +6,17 @@ function getComputerChoice() {
   return choice[randomIndex];
 };
 
-// const computerSelection = getComputerChoice();
-
-// let playerSelection = prompt("Rock, Paper, Scissor - SHOOT! (Type Rock, Paper, Scissor)");
-// playerSelection = playerSelection.toLowerCase();
-
 
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection == 'rock') {
+  if (playerSelection.toLowerCase() == 'rock') {
     if (computerSelection == 'rock') {
-      return `It is a tie. Player did: ${playerSelection} / Computer did: ${computerSelection}`
+      return `It is a tie. Player did: ${playerSelection} / Computer did: ${computerSelection}`;
     }
     else if (computerSelection == 'scissor') {
-      return `Player Wins! Player did: ${playerSelection} / Computer did: ${computerSelection}`
+      return `Player Wins! Player did: ${playerSelection} / Computer did: ${computerSelection}`;
     }
     else if (computerSelection == 'paper') {
-      return `Computer Wins! Player did:: ${playerSelection} / Computer did: ${computerSelection}`
+      return `Computer Wins! Player did:: ${playerSelection} / Computer did: ${computerSelection}`;
     }
     else {
       return `Unrecognized input: (${playerSelection})`
@@ -30,13 +25,13 @@ function playRound(playerSelection, computerSelection) {
 
   else if (playerSelection == 'paper') {
     if (computerSelection == 'paper') {
-      return `It is a tie. Player did:: ${playerSelection} / Computer did: ${computerSelection}`
+      return `It is a tie. Player did:: ${playerSelection} / Computer did: ${computerSelection}`;
     }
     else if (computerSelection == 'rock') {
-      return `Player Wins! Player did: ${playerSelection} / Computer did: ${computerSelection}`
+      return `Player Wins! Player did: ${playerSelection} / Computer did: ${computerSelection}`;
     }
     else if (computerSelection == 'scissor') {
-      return `Computer Wins! Player did: ${playerSelection} / Computer did: ${computerSelection}`
+      return `Computer Wins! Player did: ${playerSelection} / Computer did: ${computerSelection}`;
     }
     else {
       return `Unrecognized input: (${playerSelection})`
@@ -45,18 +40,20 @@ function playRound(playerSelection, computerSelection) {
 
   else if (playerSelection == 'scissor') {
     if (computerSelection == 'scissor') {
-      return `It is a tie. Player did: ${playerSelection} / Computer did: ${computerSelection}`
+      return `It is a tie. Player did: ${playerSelection} / Computer did: ${computerSelection}`;
     }
     else if (computerSelection == 'paper') {
-      return `Player Wins! Player did: ${playerSelection} / Computer did: ${computerSelection}`
+      return `Player Wins! Player did: ${playerSelection} / Computer did: ${computerSelection}`;
     }
     else if (computerSelection == 'rock') {
-      return `Computer Wins! Player did: pap${playerSelection} / Computer did: ${computerSelection}`
+      return `Computer Wins! Player did: pap${playerSelection} / Computer did: ${computerSelection}`;
     }
     else {
-      return `Unrecognized input: (${playerSelection})`
+      return `Unrecognized input: (${playerSelection})`;
     }
   }
+
+  return `Invalid Input: ${playerSelection}`;
 }
 
 
@@ -67,6 +64,8 @@ function playGame() {
   for (let i = 0; i < 5; i++) {
     let playerSelection = prompt("Rock, Paper, Scissor - SHOOT! (Type Rock, Paper, Scissor)");
     let computerSelection = getComputerChoice();
+
+    playerSelection = playerSelection.toLowerCase();
 
     let result = playRound(playerSelection, computerSelection);
     console.log(result);
