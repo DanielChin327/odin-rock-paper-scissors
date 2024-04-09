@@ -1,0 +1,40 @@
+body{
+  background-color:lightgray;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title{
+  text-align: center;
+  padding: 100px
+}
+
+.icons{
+  display:flex;
+  flex-wrap:wrap;
+  text-align: center;
+  justify-content: center;
+  gap: 30px
+
+}
+
+.button{
+  outline: 2px solid black;
+  padding: 30px;
+  border-radius: 8px
+}
+
+.result{
+  text-align:center;
+  padding: 30px
+}
+
+.score {
+  text-align:center;
+
+}
+
+
+.final{
+  text-align:center;
+  padding: 30px
+}
