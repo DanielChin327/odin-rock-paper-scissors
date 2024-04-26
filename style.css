@@ -13,8 +13,12 @@ body{
   flex-wrap:wrap;
   text-align: center;
   justify-content: center;
-  gap: 30px
+  gap: 20px;
+}
 
+.icon{
+  width: 100px;
+  cursor: pointer;
 }
 
 .button{
